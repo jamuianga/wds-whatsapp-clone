@@ -6,11 +6,11 @@ import { useConversations } from '../context/ConversationsProvider';
 export default function NewConversationModal({ closeModal }) {
   const [selectedContactIds, setSelectedContactIds] = useState([]);
   const { contacts } = useContacts();
-  const { createConversation } = useConversations();
+  const { createConversations } = useConversations();
 
   const submitHandler = (e) => {
-    e.prevenDefault();
-    createConversation(selectedContactIds);
+    e.preventDefault();
+    createConversations(selectedContactIds);
     closeModal();
   };
 
