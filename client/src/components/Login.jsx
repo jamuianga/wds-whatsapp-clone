@@ -24,7 +24,7 @@ export default function Login({ onIdSubmit }) {
           <Form.Label>Enter your ID</Form.Label>
           <Form.Control type="text" ref={idRef} required />
         </Form.Group>
-        <Button type="submit" className="me-2">
+        <Button type="submit" className="mr-2">
           Login
         </Button>
         <Button variant="secondary" onClick={createNewId}>
