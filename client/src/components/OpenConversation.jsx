@@ -40,7 +40,7 @@ export default function OpenConversation() {
                 ref={lastMessage ? setRef : null}
                 key={index}
                 className={`my-1 d-flex flex-column ${
-                  message.fromMe ? 'align-self-end' : ''
+                  message.fromMe ? 'align-self-end aling-items-end' : 'align-items-start'
                 }`}
               >
                 <div

@@ -1,8 +1,12 @@
-import http from 'http';
+// import http from 'http';
 import { Server } from "socket.io";
 
-const server = http.createServer();
-const io = new Server(server);
+// const server = http.createServer();
+const io = new Server(4000, {
+  cors: {
+    origin: "http://localhost:3000"
+  }
+});
 
 io.on('connection', socket => {
   const id = socket.handshake.query.id;
@@ -21,6 +25,6 @@ io.on('connection', socket => {
   })
 });
 
-server.listen(4000, () => {
-  console.log('Listening on 4000')
-})
+// server.listen(4000, () => {
+//   console.log('Listening on 4000')
+// })
