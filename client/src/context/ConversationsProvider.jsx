@@ -51,6 +51,7 @@ export function ConversationsProvider({ id, children }) {
   });
 
   const addMessageToConversations = ({ recipients, text, sender }) => {
+    console.log(sender);
     setConversations((prevConversations) => {
       let madeChange = false;
 
@@ -77,7 +78,7 @@ export function ConversationsProvider({ id, children }) {
   };
 
   const sendMessage = (recipients, text) => {
-    addMessageToConversations({ recipients, text, id });
+    addMessageToConversations({ recipients, text, sender: id });
   };
 
   return (
